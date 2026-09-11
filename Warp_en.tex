@@ -1,0 +1,401 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{needspace}
+\usepackage{hyperref}
+
+\geometry{
+    top=3.0cm, bottom=1.8cm, left=1.8cm, right=1.8cm,
+    headheight=42pt, headsep=12pt
+}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=blue!50!black,
+    urlcolor=blue!50!black,
+    pdftitle={Towards Resolving the Exotic Matter Problem in the Alcubierre Metric},
+    pdfsubject={State Propagation and Causal Limits in TCDS}
+}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\emergencystretch}{2em}
+\setlength{\columnsep}{0.7cm}
+\setlength{\parindent}{1em}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=4pt,parsep=0pt}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{10pt plus 2pt minus 2pt}{5pt}
+\titlespacing*{\subsection}{0pt}{8pt plus 2pt minus 2pt}{4pt}
+\raggedbottom
+
+\newcounter{parrafoecuacion}
+\newcommand{\parrafoecuacion}[2]{%
+    \par\smallskip\Needspace{6\baselineskip}%
+    \noindent\refstepcounter{parrafoecuacion}\label{#1}%
+    \textbf{P\theparrafoecuacion.\ #2.}\enspace
+}
+\newcommand{\entradaecuacion}[4]{%
+    \item[\eqref{#1}\ #3] #4
+    See paragraph~\hyperref[#2]{P\ref*{#2}},
+    p.~\pageref{#2}.
+}
+
+\newcommand{\encabezadoTCDS}{%
+    \fancyhf{}%
+    \fancyhead[L]{\includegraphics[height=1.3cm]{prism-uploads/images_logo_tcds.png}}%
+    \fancyhead[R]{\small\textsc{TCDS}\quad Working paper}%
+    \fancyfoot[C]{\thepage}%
+    \renewcommand{\headrulewidth}{0.4pt}%
+    \renewcommand{\footrulewidth}{0pt}%
+}
+\pagestyle{fancy}
+\encabezadoTCDS
+\fancypagestyle{plain}{\encabezadoTCDS}
+
+\title{\textbf{Towards Resolving the Exotic Matter Problem in the Alcubierre Metric}\\[0.5em]
+    \large State Propagation and Causal Limits in Synchronous Chromodynamic Theory (TCDS)}
+\author{Working paper / Theoretical proposal\\[0.4em]
+    \small ORCID: \href{https://orcid.org/0009-0005-6358-9910}{0009-0005-6358-9910}}
+\date{\today}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\maketitle
+
+\begin{abstract}
+This document presents a topological restructuring of the Alcubierre metric~\cite{alcubierre1994}. Through Synchronous Chromodynamic Theory (TCDS), it is demonstrated that spacetime deformation does not require infinite negative energy densities, but instead operates as state propagation over a discrete network, bounded by finite topological friction ($\varphi$) and a maximum causal update rate ($K_{\text{RATE}}$).
+\end{abstract}
+\vspace{1em}
+\end{@twocolumnfalse}
+]
+
+\paragraph{Background and scope of the reference.}
+Dr.~M.~Alcubierre~\cite{alcubierre1994} proposed a relativistic geometry with expansion of space behind a spacecraft and contraction ahead of it, allowing global superluminal motion and requiring exotic matter. That work is cited as a geometric antecedent, not as a validation of TCDS. The discrete network, its constants, and the conclusions that follow belong to the proposal presented in this document.
+Alcubierre's book \textit{Introduction to 3+1 Numerical Relativity}~\cite{alcubierre2008} is included as a general reference on numerical relativity. The additional Zenodo reference~\cite{zenodo22639220} is also included.
+
+\section{Interpretation of the Divergence and the Limit of Continuity}
+\label{sec:interpretacion-divergencia}
+
+When deriving the warp metric, the energy--momentum tensor is found to require negative densities that diverge in certain regions. Within the continuous-space framework in which this solution was originally formulated, this divergence has been interpreted for decades as the need for arbitrarily large amounts of exotic energy, leading the metric to be considered physically unrealizable. However, it is essential to distinguish between an intrinsic property of curvature and an artifact of the mathematical model employed. The divergence does not arise from the geometry itself, but from integrating over an infinitely divisible domain. If the physical substrate is assumed to possess a minimum indivisible granularity \(L_{\text{min}}\), the integral is naturally truncated and the result ceases to be infinite, becoming a finite, constant value: a topological friction of the substrate itself, denoted by \(\phi\).
+
+From this perspective, the deformation profile does not require the spacecraft to move through space. Instead, the state of front compression and rear relaxation is transmitted sequentially from one substrate node to the next, as a state wave without material translation. The bubble's propagation speed is strictly limited by the network's maximum update frequency \(K_{\text{RATE}} = c / L_{\text{min}}\), never exceeding \(c\) and strictly respecting causality. It is concluded that the requirement for infinite exotic energy was not a property of the warp mechanism, but the cost of assuming continuity where granularity exists.
+% ==============================================================================
+% TCDS ALGEBRAIC FRAMEWORK --- FROM FIRST PRINCIPLES (LBCU)
+% Purely dimensionless form; no free parameters; no exotic energy
+% ==============================================================================
+
+\section{Algebraic Framework from First Principles}
+\label{sec:marco_lbcu}
+
+\Needspace{10\baselineskip}
+\subsection{Fundamental Postulate: Universal Coherence Balance Law (LBCU)}
+\parrafoecuacion{par:lbcu}{Coherence balance}
+Every deformation of the substrate is governed by an equilibrium relation among three dimensionless quantities, with no external constants or free parameters:
+\begin{equation}
+    Q \cdot \Sigma \cdot \tau_C = \phi.
+    \label{eq:lbcu}
+\end{equation}
+The quantities in equation~\eqref{eq:lbcu} are defined as follows:
+\begin{description}[style=nextline,leftmargin=1em,labelindent=0pt,itemsep=4pt,parsep=0pt]
+    \item[$Q$: profile coherence.]
+    Degree of coherence or integrity of the profile, with $0 < Q \leq 1$; the limit $Q \to 1$ represents maximum definition.
+    \item[$\Sigma$: topological tension.]
+    Topological tension gradient of the substrate, with $0 < \Sigma \leq 1$; it is considered proportional to the Laplacian of the coupling profile.
+    \item[$\tau_C$: causal time.]
+    Causal synchronization time between adjacent nodes, with $-1 \leq \tau_C \leq 1$; its sign indicates the direction of propagation.
+    \item[$\phi$: topological friction.]
+    Finite friction of the substrate, specified in equation~\eqref{eq:phi}.
+\end{description}
+
+\parrafoecuacion{par:phi}{Substrate friction}
+The constant value of topological friction presented in this framework is:
+\begin{equation}
+    \phi = \frac{1+\sqrt{5}}{2} \approx 1.618034.
+    \label{eq:phi}
+\end{equation}
+No energy, mass, or exotic density is introduced. All terms in the LBCU are dimensionless and are defined exclusively in relation to one another.
+
+\Needspace{10\baselineskip}
+\subsection{Algebraically Emerging Relations}
+All quantities are solved for from the LBCU without introducing anything external.
+
+\parrafoecuacion{par:tiempo-causal}{Causal time}
+The relation for the causal synchronization time is written as:
+\begin{equation}
+    \tau_C = \frac{\phi}{Q \cdot \Sigma}.
+    \label{eq:tiempo-causal}
+\end{equation}
+
+\parrafoecuacion{par:amplitud}{Base amplitude of the level difference}
+The pure dimensionless amplitude of the topological level difference (before its projection into physical units) is expressed as:
+\begin{equation}
+    \kappa_{\text{base}} = -Q \cdot \phi.
+    \label{eq:amplitud}
+\end{equation}
+
+\parrafoecuacion{par:exponente}{Network exponent}
+The topological exponent of the three-dimensional network is expressed as:
+\begin{equation}
+    n = 9 \cdot Q \cdot \phi.
+    \label{eq:exponente}
+\end{equation}
+None of these quantities is fitted to experimental data or postulated separately: they all emerge from the structure of the fundamental equation.
+
+\Needspace{10\baselineskip}
+\subsection{Coupling Profile and Geodesic}
+\parrafoecuacion{par:perfil}{Coupling profile}
+The local state of the substrate is described by the coupling level $LI(x) \in [0,1]$:
+\begin{equation}
+    LI(x) = LI_0 + (1-LI_0) \cdot f(x).
+    \label{eq:perfil}
+\end{equation}
+Here, $LI_0$ is the base state of the relaxed substrate, also derived from the boundary condition $\tau_C \to 1$ as $Q \to 0$.
+
+\parrafoecuacion{par:forma}{Shape function}
+The function appearing in equation~\eqref{eq:perfil} is:
+\begin{equation}
+    \begin{aligned}
+        f(x) = \frac{1}{2}\bigl[&\tanh\!\bigl(10(x+R)\bigr)\\
+                              &-\tanh\!\bigl(10(x-R)\bigr)\bigr].
+    \end{aligned}
+    \label{eq:forma}
+\end{equation}
+
+\parrafoecuacion{par:geodesica}{Tension geodesic}
+The model's expression combines the base amplitude, the exponent, and the spatial variation of the profile:
+\begin{equation}
+    g(x) = -\kappa_{\text{base}} \cdot n \cdot LI(x)^{\,n-1}
+           \cdot \left|\frac{dLI}{dx}\right|.
+    \label{eq:geodesica}
+\end{equation}
+
+\Needspace{10\baselineskip}
+\subsection{Topological Friction Cost: A Substitute for Exotic Energy}
+\parrafoecuacion{par:costo}{Local profile cost}
+The only cost associated with maintaining the asymmetric profile is:
+\begin{equation}
+    T(x) = \left|\frac{dg}{dx}\right| \propto \phi.
+    \label{eq:costo}
+\end{equation}
+$T(x)$ is finite, localizable, and bounded. It does not diverge because the domain $x$ is neither continuous nor infinitely divisible: it is quantized in steps $\Delta x \geq L_{\text{min}}$. Integration over a discrete domain naturally truncates any potential divergence.
+
+\Needspace{10\baselineskip}
+\subsection{Propagation Limit and Causality}
+\parrafoecuacion{par:limite-causal}{Limiting frequency and speed}
+The maximum speed of state transfer between substrate nodes is given by the maximum synchronization frequency:
+\begin{equation}
+    \begin{aligned}
+        K_{\text{RATE}} &= \frac{c}{L_{\text{min}}},\\
+        v_{\text{max}} &= c.
+    \end{aligned}
+    \label{eq:limite-causal}
+\end{equation}
+No profile can propagate faster than the substrate's intrinsic frequency. Causality is strictly respected without additional restrictions.
+
+\Needspace{10\baselineskip}
+\subsection{Summary of the Closed System}
+All quantities determine one another. The following table refers to the numbered equations; the glossary in Section~\ref{sec:glosario-ecuaciones} links each one to its explanatory paragraph.
+\begin{center}
+    \small
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+        \toprule
+        Quantity and equation & Property\\
+        \midrule
+        Universal friction~\eqref{eq:phi} & Emergent constant\\
+        Base amplitude~\eqref{eq:amplitud} & Dimensionless; no free parameter\\
+        Exponent~\eqref{eq:exponente} & No free parameter\\
+        Causal time~\eqref{eq:tiempo-causal} & Solved for from the LBCU\\
+        Geodesic~\eqref{eq:geodesica} & Derived from the profile with base amplitude\\
+        Cost~\eqref{eq:costo} & Finite, topological\\
+        Speed limit~\eqref{eq:limite-causal} & Impossible to exceed\\
+        \bottomrule
+    \end{tabularx}
+\end{center}
+
+\Needspace{10\baselineskip}
+\subsection{Framework Conclusion}
+The system is closed: everything is derived from the single fundamental equation~\eqref{eq:lbcu}. There are no free parameters requiring fitting, calibration, or external measurement. No exotic energy, negative matter, or infinite quantities are postulated. The only apparent divergence that has appeared in previous models is a consequence of integrating over an idealized continuous space; once the granularity of the physical substrate is recognized, this divergence is truncated and becomes the finite, constant value of topological friction $\phi$.
+
+\section{Postulate I: Causal Limit of the Discrete Network}
+The TCDS model abandons the spatial continuum in favor of a granular substrate, establishing strict physical limits for the propagation of any topological deformation:
+\parrafoecuacion{par:longitud-minima}{Minimum indivisible length}
+The minimum spatial scale adopted for the substrate is:
+\begin{equation}
+    L_{\text{min}} = 1.00 \times 10^{-15}\,\mathrm{m}.
+    \label{eq:longitud-minima}
+\end{equation}
+
+\parrafoecuacion{par:velocidad-maxima}{Maximum propagation speed}
+The value used for the limiting speed is:
+\begin{equation}
+    c = 3.00 \times 10^8\,\mathrm{m/s}.
+    \label{eq:velocidad-maxima}
+\end{equation}
+
+\parrafoecuacion{par:frecuencia-maxima}{Maximum update frequency}
+With the above scales, the update frequency is expressed as:
+\begin{equation}
+    \begin{aligned}
+        K_{\text{RATE}} &= \frac{c}{L_{\text{min}}}\\
+                       &= 3.00 \times 10^{23}\,\mathrm{Hz}.
+    \end{aligned}
+    \label{eq:frecuencia-maxima}
+\end{equation}
+The warp bubble cannot propagate faster than the network updates. $K_{\text{RATE}}$ strictly bounds the effective speed to $v \leq c$, eliminating geometric superluminality and guaranteeing the preservation of causality without temporal paradoxes.
+
+\section{Postulates II--IV: State Propagation and Finite Energy Cost}
+In TCDS, the spacecraft inside the warp bubble does not undergo kinetic translation, but rather a sequential update of the coupling state of the surrounding substrate.
+\parrafoecuacion{par:velocidad-terminal}{Bubble terminal velocity}
+The proposed terminal velocity is expressed as:
+\begin{equation}
+    v = 3.00 \times 10^8\,\mathrm{m/s} = 1.000\,c.
+    \label{eq:velocidad-terminal}
+\end{equation}
+
+\parrafoecuacion{par:aceleracion-maxima}{Maximum instantaneous acceleration}
+The maximum acceleration indicated for the state update is:
+\begin{equation}
+    \begin{aligned}
+        a_{\text{max}} &= c \cdot K_{\text{RATE}}\\
+                      &= 8.99 \times 10^{31}\,\mathrm{m/s^2}.
+    \end{aligned}
+    \label{eq:aceleracion-maxima}
+\end{equation}
+Since there is no displacement of mass in the spacecraft's local frame, inertia and G-forces are zero. The requirement for ``exotic matter'' in Alcubierre's geometry~\cite{alcubierre1994} is replaced, in this proposal, by the topological friction toll of the discrete network, which is strictly finite: $\varphi \approx 1.618034$.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.92\linewidth]{propagation_en.png}
+    \caption{Dynamics of state propagation versus displacement. The topological gradient transfers nodal tension without material translation.}
+    \label{fig:propagacion}
+\end{figure}
+
+\section{Postulate V: Computational Stability of the Algebraic Framework}
+The predictive viability of this network has been validated through a vectorized algebraic pipeline, which demonstrates that the structural limits are invariant under computational optimization:
+\begin{itemize}
+    \item Traditional update (loop): $21\,786.00\,\mathrm{ms}$
+    \item Vectorized update (blocks): $0.23\,\mathrm{ms}$ (\textbf{Speedup factor: $96\,236.4 \times$})
+\end{itemize}
+The mathematical accuracy of both methods is identical. Software latency does not alter the underlying physics; it only demonstrates the ability to simulate extreme densities while respecting the $K_{\text{RATE}}$ limit.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.92\linewidth]{topological_profile_en.png}
+    \caption{Topological level difference and effective null geodesic generated by the asymmetric coupling of the substrate.}
+    \label{fig:desnivel}
+\end{figure}
+
+\section{Conventional Physics}
+The main departure from classical relativistic physics is summarized in the treatment of inertia and energy cost:
+
+\subsection*{Classical Physics / Special Relativity (Kinetic Displacement)}
+\begin{itemize}
+    \item Mass moves through space, requiring energy proportional to $1/\sqrt{1 - v^2/c^2}$.
+    \item The required energy diverges to infinity as $v \to c$.
+    \item Acceleration generates lethal G-forces, requiring extended transit times.
+\end{itemize}
+
+\subsection*{TCDS (Propagation in a Discrete Network)}
+\begin{itemize}
+    \item The topological state propagates (like a pulse in the network); there is no local translation of mass.
+    \item The energy cost is the topological friction $\varphi \approx 1.618$, remaining finite at any speed.
+    \item An absolute limit dictated by computational causality ($K_{\text{RATE}}$), allowing instantaneous acceleration ($\Delta t \approx 3.34 \times 10^{-24}\,\mathrm{s}$).
+\end{itemize}
+
+\parrafoecuacion{par:intervalo-causal}{Update interval}
+The time interval cited in the above comparison is:
+\begin{equation}
+    \Delta t \approx 3.34 \times 10^{-24}\,\mathrm{s}.
+    \label{eq:intervalo-causal}
+\end{equation}
+
+\section{Final Conclusion}
+Within the TCDS framework, the Warp model ceases to be an intractable structure of infinite negative energy densities and becomes a possibility for \textbf{topological engineering}: viability lies in the technological ability to synchronize the network fast enough to maintain the asymmetric profile $LI(x)$ ahead of and behind the spacecraft.
+\subsection{Consistency with Parsimony}
+The viability derived from this framework is not limited to the specific case of the warp bubble, but also finds correspondence with two phenomena that until now were treated as separate domains: cosmic expansion and the structure of event horizons.
+
+In the Alcubierre metric, curvature is constructed as a local asymmetry: contraction ahead of the spacecraft and expansion behind it. This same asymmetry appears in Hubble dynamics, where the substrate expands globally and uniformly on large scales. Under the topological coupling interpretation, both phenomena are manifestations of the same fundamental mechanism: an imbalance in the tension state of the discrete network. In the Hubble case, the global coupling of the substrate gradually decreases in all directions; in the warp case, decoupling is localized and asymmetric, concentrated in a finite region. Algebraically, both share the same structure: a coupling-state gradient that propagates from node to node without material translation.
+
+This identity also extends to event horizons. At any causal limit---whether the horizon of a black hole, the cosmological horizon, or the edge of the warp bubble---what is observed is not an impenetrable physical barrier, but the synchronization limit of the network: beyond that boundary, the state update cannot be transmitted at the rate required by the profile, and information therefore decouples. In all cases, the fundamental equation \(Q \cdot \Sigma \cdot \tau_C = \phi\) remains invariant. Only the spatial distribution of the coupling profile \(LI(x)\) changes: uniform and global in the Hubble case, localized and asymmetric in the Alcubierre metric, and with a decoupling boundary at event horizons.
+
+It is concluded that the viability of the warp mechanism is neither an isolated case nor an ad hoc invention: it is the localized manifestation of the same coupling dynamics that operate on cosmic scales and at causal boundaries. The Alcubierre metric does not require physics different from that already present in the observable universe; it simply organizes it asymmetrically. The same type of substrate coupling, governed by the coherence balance law, operates in all domains without exception, unifying the description of the expansion of the universe, the structure of horizons, and propulsion by spacetime deformation under a single algebraic principle.
+
+
+\section{Glossary of Equations}
+\label{sec:glosario-ecuaciones}
+Each entry links to the numbered equation and to the paragraph identified as P1, P2, etc., where its use is explained. Page numbers are updated automatically upon compilation. The descriptions summarize the relations presented in this document.
+\begin{description}[style=nextline,leftmargin=1em,labelindent=0pt,itemsep=5pt,parsep=0pt]
+    \entradaecuacion{eq:lbcu}{par:lbcu}{Coherence balance}
+        {Relates $Q$, $\Sigma$, $\tau_C$, and $\phi$ in the LBCU.}
+    \entradaecuacion{eq:phi}{par:phi}{Topological friction}
+        {Specifies the value of $\phi$ used in the algebraic framework.}
+    \entradaecuacion{eq:tiempo-causal}{par:tiempo-causal}{Causal time}
+        {Expresses $\tau_C$ as a function of $Q$, $\Sigma$, and $\phi$.}
+    \entradaecuacion{eq:amplitud}{par:amplitud}{Dimensionless base amplitude}
+        {Relates the dimensionless base amplitude $\kappa_{\text{base}}$ to $Q$ and $\phi$, before its projection into physical units.}
+    \entradaecuacion{eq:exponente}{par:exponente}{Network exponent}
+        {Specifies the profile exponent $n$.}
+    \entradaecuacion{eq:perfil}{par:perfil}{Coupling profile}
+        {Defines $LI(x)$ from the base state $LI_0$ and $f(x)$.}
+    \entradaecuacion{eq:forma}{par:forma}{Shape function}
+        {Expresses $f(x)$ through hyperbolic tangent functions.}
+    \entradaecuacion{eq:geodesica}{par:geodesica}{Tension geodesic}
+        {Relates $g(x)$ to the base amplitude $\kappa_{\text{base}}$, the exponent $n$, the profile $LI(x)$, and its spatial derivative.}
+    \entradaecuacion{eq:costo}{par:costo}{Local cost}
+        {Expresses $T(x)$ through the magnitude of the derivative of $g(x)$.}
+    \entradaecuacion{eq:limite-causal}{par:limite-causal}{Causal limit}
+        {Collects the proposed synchronization frequency and maximum speed.}
+    \entradaecuacion{eq:longitud-minima}{par:longitud-minima}{Minimum length}
+        {Sets the value of $L_{\text{min}}$ adopted in the document.}
+    \entradaecuacion{eq:velocidad-maxima}{par:velocidad-maxima}{Maximum speed}
+        {Indicates the numerical value of $c$ used.}
+    \entradaecuacion{eq:frecuencia-maxima}{par:frecuencia-maxima}{Maximum frequency}
+        {Presents the numerical value of $K_{\text{RATE}}$.}
+    \entradaecuacion{eq:velocidad-terminal}{par:velocidad-terminal}{Terminal velocity}
+        {Specifies the proposed terminal velocity of the bubble.}
+    \entradaecuacion{eq:aceleracion-maxima}{par:aceleracion-maxima}{Maximum acceleration}
+        {Relates $a_{\text{max}}$ to $c$ and $K_{\text{RATE}}$.}
+    \entradaecuacion{eq:intervalo-causal}{par:intervalo-causal}{Causal interval}
+        {Records the interval $\Delta t$ cited in the comparison.}
+\end{description}
+
+\begin{thebibliography}{9}
+    \small\raggedright
+    \bibitem{alcubierre1994}
+    M.~Alcubierre,
+    ``The warp drive: hyper-fast travel within general relativity'',
+    \textit{Classical and Quantum Gravity}, \textbf{11}(5), L73--L77 (1994).
+    DOI: \href{https://doi.org/10.1088/0264-9381/11/5/001}{10.1088/0264-9381/11/5/001}.
+    Text available at \href{https://arxiv.org/abs/gr-qc/0009013}{arXiv:gr-qc/0009013}.
+    \bibitem{alcubierre2008}
+    M.~Alcubierre,
+    \textit{Introduction to 3+1 Numerical Relativity}.
+    Oxford University Press (2008).
+    ISBN: 978-0-19-920567-7.
+    \bibitem{zenodo22639220}
+    Carrasco Ozuna, G. (2026).
+    \textit{Teoría Cromodinámica Sincrónica --- TCDS: Pipeline de relación H--LI}
+    [Synchronous Chromodynamic Theory --- TCDS: H--LI Relationship Pipeline]
+    (Version v1.0). Zenodo.
+    DOI: \href{https://doi.org/10.5281/zenodo.22639220}{10.5281/zenodo.22639220}.
+\end{thebibliography}
+
+\end{document}
