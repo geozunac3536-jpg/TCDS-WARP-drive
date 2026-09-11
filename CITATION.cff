@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software or the theoretical framework, please cite it as below."
 authors:
-  - family-names: "[Autor]"
-    given-names: "[Nombre]"
+  - family-names: "[Carrasco Ozuna]"
+    given-names: "[Genaro]"
     orcid: "https://orcid.org/0009-0005-6358-9910"
 title: "TCDS-WARP-drive: Teoría Cromodinámica Sincrónica — Propagación de Estado y Límites Causales en la Métrica de Alcubierre"
 version: "1.0.0"
 date-released: 2026-09-11
-url: "https://github.com/[usuario]/TCDS-WARP-drive"
+url: "https://github.com/geozunac3536-jpg.github.io/TCDS-WARP-drive"
 license: "CC-BY-4.0"
 reference:
   - authors:
