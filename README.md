@@ -97,23 +97,6 @@ Horizontes de Sucesos Con frontera de desacople Límite causal donde la sincroni
  
 En todos los casos se cumple la misma ecuación fundamental Q·Σ·τ_C = φ. Lo que cambia es únicamente la distribución espacial del perfil de acoplamiento. No se requiere nueva física para ninguno de los tres dominios.
  
- 
- 
-Estructura del Repositorio
- 
-plaintext
-  
-tcds-alcubierre/
-├── README.md                          
-├── docs/
-│   ├── WARP_en.tex     — Documento Inglés en LaTeX
-│   ├── WARP_en.pdf     — Versión Inglés 
-│   ├── Warp_Spanish.tex           —
-│   └── WARP_spanish.pdf         
-├── codigo/
-│   ├── script_1.py    
-│   ├── script_2.py              
-│   ├── script_3.py       
 
  
  
