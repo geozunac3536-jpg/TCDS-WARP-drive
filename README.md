@@ -186,9 +186,4 @@ Para preguntas técnicas, revisión del marco o colaboración, utilizar el siste
  
  
  
-📌 Notas para el repositorio:
- 
-- Sin emojis, sin lenguaje informal: tono serio, objetivo y académico
-- Optimizado para crawlers: estructura clara, palabras clave relevantes, resumen completo al inicio
-- Indexable: cada sección tiene encabezados descriptivos, definiciones explícitas, referencias formales
-- Transparente: se declara claramente qué se afirma, qué se postula y qué está pendiente
+
