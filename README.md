@@ -104,28 +104,17 @@ Estructura del Repositorio
 plaintext
   
 tcds-alcubierre/
-├── README.md                          — Este archivo
+├── README.md                          
 ├── docs/
-│   ├── tcds_articulo_completo.tex     — Documento formal en LaTeX
-│   ├── tcds_articulo_completo.pdf     — Versión compilada del trabajo
-│   ├── marco_algebraico.tex           — Derivación paso a paso
-│   └── citas_referencias.bib          — Bibliografía formal
+│   ├── WARP_en.tex     — Documento Inglés en LaTeX
+│   ├── WARP_en.pdf     — Versión Inglés 
+│   ├── Warp_Spanish.tex           —
+│   └── WARP_spanish.pdf         
 ├── codigo/
-│   ├── tcds_perfil_acoplamiento.py    — Generación del perfil LI(x)
-│   ├── tcds_geodesica.py              — Cálculo de g(x) y T(x)
-│   ├── tcds_limite_causal.py          — Cálculo de K_RATE y v_max
-│   └── tcds_validacion_vectorizada.py — Validación de rendimiento computacional
-├── datos/
-│   ├── valores_constantes.csv         — Valores de φ, κ, n, K_RATE
-│   └── perfiles_ejemplo.csv           — Ejemplos de LI(x) para distintos Q
-├── .github/
-│   └── workflows/
-│       └── compile-latex.yml          — Compilación automática del documento
-├── CITATION.cff                       — Formato de citación para software
-├── LICENSE                            — Licencia de uso y difusión
-└── .gitignore                         — Archivos excluidos del control de versiones
- 
- 
+│   ├── script_1.py    
+│   ├── script_2.py              
+│   ├── script_3.py       
+
  
  
 Archivos Técnicos Disponibles
